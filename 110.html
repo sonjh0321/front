@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <link href="favicon.ico" rel="icon">
+    <title>성복고1학년10반</title>
+    <style>
+        html, body {
+            margin: 0;
+        }
+        .container{
+            text-align: center;
+        }
+        .clock{
+            width: 500px; margin: 5px auto;
+            border: 2px solid black;
+            border-radius: 10px;
+        }
+        h2 {
+            background-color: azure;
+        }
+        button{
+            color: blue;
+            font-size: large;
+            width: 150px;
+            height: 50px;
+        }
+
+    </style>
+
+</head>
+<body>
+    <nav style="background-color: gold" >
+        <a href="index.html" style="font-size: xx-large">메인</a>
+        <a href="gndnjs.html">노예공고</a>
+    </nav>
+    <hr>
+    <h2><em>사용 설명:</em></h2>
+    <h2>카운트시작을 누르면 작동을 시작합니다. <br>정해진 시간이 되면 그 시간에 맞는 줌 수업이 자동으로 열립니다.
+    단, 줌 수업에 암호가 있으면 수동으로 암호를 입력해야 합니다. 또한 줌 수업이 자동으로 열릴려면 브라우저에서
+    새창 열기를 승인해야 됩니다. <-`이 설정은 대부분의 친구가 이미 설정해두었을 것이라 생각`
+    <br>또한 이 사이트에 대해 모든 팝업을 허용해야 된다고 설정해두셔야 합니다.</h2>
+    <img src="캡처_2021_09_14_22_12_00_551.png" alt="줌 자동열기승인"> <br>
+    <img src="chro.jpeg" alt="팝업허용">
+    <h3>기준: 2021년 성복고 1학년 10반 2학기 시간표, 각 수업 45분, 수요일 창체는 비워둠</h3>
+    <br>
+    <br>
+    <div class="container">
+        <div class="clock">
+            <h1 id="time"></h1>
+        </div>
+        <button id="go">시작</button>
+    </div>
+    <script>
+        let handleId = 0;
+        const h1 = document.getElementById("time")
+        const go = document.getElementById("go")
+        const WEEKDAY = ['SUN', 'MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT']
+
+        function getTime()
+        {
+            const date = new Date()
+            const hour = date.getHours();
+            const minutes = date.getMinutes();
+            const seconds = date.getSeconds();
+            let week = WEEKDAY[date.getDay()];
+            const time = `${week}:${hour}:${minutes}:${seconds}`
+            if((week == 'MON' && hour == 9 && minutes == 9 && seconds == 30) || (week == 'TUE' && hour == 15 && minutes == 29 && seconds == 30) || (week == 'WED' && hour == 9 && minutes == 9 && seconds == 30) || (week == 'THU' && hour == 10 && minutes == 4 && seconds == 30) || (week == 'FRI' && hour == 15 && minutes == 29 && seconds == 30)) //수학
+            {
+                window.open("https://zoom.us/j/7189254049?pwd=bmkzTW9iZ3hZUFZnMnhtVmNWYW9vdz09")
+            }
+            if((week == 'MON' && hour == 10 && minutes == 59 && seconds == 30) || (week == 'TUE' && hour == 9 && minutes == 9 && seconds == 30) || (week == 'THU' && hour == 14 && minutes == 34 && seconds == 30) || (week == 'FRI' && hour == 10 && minutes == 4 && seconds == 30)) //국어
+            {
+                window.open("https://zoom.us/j/8435905317?pwd=UlJlUnMvRUxxcUFJRU9qNGp1NkhFZz09")
+            }
+            if((week == 'MON' && hour == 15 && minutes == 29 && seconds == 30) || (week == 'TUE' && hour == 11 && minutes == 54 && seconds == 30) || (week == 'THU' && hour == 13 && minutes == 39 && seconds == 30) || (week == 'FRI' && hour == 14 && minutes == 34 && seconds == 30)) //영어
+            {
+                window.open("https://zoom.us/j/5767533419?pw")
+            }
+            if((week == 'WED' && hour == 10 && minutes == 4 && seconds == 30)) //기술
+            {
+                window.open("https://zoom.us/j/3057497246?pwd=WXhJeGUyMVY5TFkyVUlmQVhuOExVUT09")
+            }
+            if((week == 'WED' && hour == 10 && minutes == 59 && seconds == 30)) //가정
+            {
+                window.open("https://zoom.us/j/9649445237?pwd=ZjQzdjZ1MFBTcVBUbjFaNlpaWW5Jdz09")
+            }
+            if((week == 'FRI' && hour == 11 && minutes == 54 && seconds == 30) || (week == 'TUE' && hour == 10 && minutes == 4 && seconds == 30) || (week == 'THU' && hour == 9 && minutes == 9 && seconds == 30)) //한국사
+            {
+                window.open("https://zoom.us/j/5867610101?pwd=ekpMVjRkL2N6a0s5clk0MlYvTU8wUT09")
+            }
+            if((week == 'MON' && hour == 14 && minutes == 34 && seconds == 30) || (week == 'WED' && hour == 11 && minutes == 54 && seconds == 30) || (week == 'THU' && hour == 15 && minutes == 29 && seconds == 30)) //통사
+            {
+                window.open("https://zoom.us/j/6020968029?pwd=NE5RK1ZaQXNvS2djYnhYMlpQYUR4UT09")
+            }
+            if((week == 'MON' && hour == 11 && minutes == 54 && seconds == 30) || (week == 'TUE' && hour == 13 && minutes == 39 && seconds == 30) || (week == 'THU' && hour == 10 && minutes == 59 && seconds == 30)) //통과
+            {
+                window.open("https://zoom.us/j/6623646116?pwd=TldyTmo0RXgxTDBFQkVZSi9hWUVyUT09")
+            }
+            if((week == 'MON' && hour == 13 && minutes == 39 && seconds == 30)) //진로
+            {
+                window.open("https://zoom.us/j/9562397820?pwd=anc3R0c4Z0FGZmo2MEdMdVVXNWVLZz09")
+            }
+            if((week == 'TUE' && hour == 14 && minutes == 34 && seconds == 30) || (week == 'FRI' && hour == 13 && minutes == 39 && seconds == 30)) //미술
+            {
+                window.open("https://zoom.us/j/4109290323?pwd=T2dIYkhWbE1YNWJvQklaTjErNFZSdz09")
+            }
+            if((week == 'MON' && hour == 10 && minutes == 4 && seconds == 30) || (week == 'FRI' && hour == 10 && minutes == 59 && seconds == 30)) //음악
+            {
+                window.open("https://zoom.us/j/2100294433?pwd=UUZDbGJpY3JVVHBGZXlEOUJFZmdudz09")
+            }
+            if((week == 'FRI' && hour == 11 && minutes == 54 && seconds == 30)) //탐실
+            {
+                window.open("https://zoom.us/j/6474790624?pwd=bHd3VURXNDBWM3FEaW0xNXZtVFYxUT09")
+            }
+            if((week == 'TUE' && hour == 10 && minutes == 59 && seconds == 30) || (week == 'THU' && hour == 11 && minutes == 54 && seconds == 30)) //체육육
+            {
+                window.open("https://zoom.us/j/4746021390?pwd=SkpkNUhXSTEraDhFK0owWEpZT3poZz09")
+            }
+
+            h1.textContent = time;
+    }
+
+
+        go.onclick = function()
+        {
+            if(handleId == 0)
+            {
+                handleId = setInterval(getTime, 1000)
+            }
+        }
+    </script>
+</body>
+</html>

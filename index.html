@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <link href="favicon.ico" rel="icon">
+    <title>Hello</title>
+    <style>
+        body {
+            background-color: lightgreen;
+        }
+    </style>
+    <script>
+        function printName() {
+            const name = document.getElementById('name').value;
+            document.getElementById("result").innerText = name;
+            if(name == 11017)
+            {
+                document.write(`<h1>정답을 맞추었습니다. 특별페이지로 이동할 수 있는 권한을 드립니다.</h1>`);
+                document.write(`<br><a href="gndnjs.html">노예 구인공고</a>`);
+                document.write(`<br><br><br><a href="110.html">특별혜택누리러 가기</a>`);
+            }
+        }
+    </script>
+</head>
+<body>
+    <div style="text-align: center" >
+        <h1>너네는 이런거 못 만들지?ㅋㅋㅋㅋㅋㅋㅋㅋㅋ</h1>
+        <br>
+        <a href="gndnjs.html">노예 구인공고</a>
+        <br>
+        <h2>개발자의 학번을 입력해보세요! 재미있는 일이 생길 것입니다.</h2>
+        <input id='name' onchange='printName()'/>
+        <div id='result'></div>
+    </div>
+</body>
+</html>
