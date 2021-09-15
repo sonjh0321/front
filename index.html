@@ -3,10 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <link href="favicon.ico" rel="icon">
+    <meta property="og:title" content="줌링크 들어갈때마다 불편하지 않아?">
+    <meta property="og:description" content="1학년 10반 줌 자동으로 들어가기">
+    <meta property="og:image" content="보노보노1.jpg">
+
     <title>Hello</title>
     <style>
         body {
             background-color: lightgreen;
+        }
+        #name {
+            width: 300px;
+            height: 200px;
         }
     </style>
     <script>
@@ -17,7 +25,7 @@
             {
                 document.write(`<h1>정답을 맞추었습니다. 특별페이지로 이동할 수 있는 권한을 드립니다.</h1>`);
                 document.write(`<br><a href="gndnjs.html">노예 구인공고</a>`);
-                document.write(`<br><br><br><a href="110.html">특별혜택누리러 가기</a>`);
+                document.write(`<br><br><br><a href="110.html"><h2 style="text-align: center">특별혜택누리러 가기</h2></a>`);
             }
         }
     </script>
@@ -25,10 +33,11 @@
 <body>
     <div style="text-align: center" >
         <h1>너네는 이런거 못 만들지?ㅋㅋㅋㅋㅋㅋㅋㅋㅋ</h1>
+        <br><h1>이 사이트는 모바일에 비최적화되어 있습니다. 기능작동에는 이상이 없으니 참고해주십시오.</h1>
         <br>
         <a href="gndnjs.html">노예 구인공고</a>
         <br>
-        <h2>개발자의 학번을 입력해보세요! 재미있는 일이 생길 것입니다.</h2>
+        <h2> 밑에 창에 개발자의 학번을 입력해보세요!(그리고 엔터/이동) 재미있는 일이 생길 것입니다.</h2>
         <input id='name' onchange='printName()'/>
         <div id='result'></div>
     </div>

@@ -21,9 +21,9 @@
         }
         button{
             color: blue;
-            font-size: large;
-            width: 150px;
-            height: 50px;
+            font-size: xx-large;
+            width: 350px;
+            height: 150px;
         }
 
     </style>
@@ -39,9 +39,11 @@
     <h2>카운트시작을 누르면 작동을 시작합니다. <br>정해진 시간이 되면 그 시간에 맞는 줌 수업이 자동으로 열립니다.
     단, 줌 수업에 암호가 있으면 수동으로 암호를 입력해야 합니다. 또한 줌 수업이 자동으로 열릴려면 브라우저에서
     새창 열기를 승인해야 됩니다. <-`이 설정은 대부분의 친구가 이미 설정해두었을 것이라 생각`
-    <br>또한 이 사이트에 대해 모든 팝업을 허용해야 된다고 설정해두셔야 합니다.</h2>
-    <img src="캡처_2021_09_14_22_12_00_551.png" alt="줌 자동열기승인"> <br>
+    <br>또한 이 사이트에 대해 모든 팝업을 허용해야 된다고 설정해두셔야 합니다. 아래 이미지들을 보면서 따라해주십시오.</h2>
+    <img src="캡처_2021_09_14_22_12_00_551.png" alt="줌 자동열기승인"> <hr> <hr>
     <img src="chro.jpeg" alt="팝업허용">
+    <br>
+    <h2 style="text-align: center"><em>사이트 설정에서 현재 url을 팝업허용해두도록 설정하셔야합니다!</em></h2>
     <h3>기준: 2021년 성복고 1학년 10반 2학기 시간표, 각 수업 45분, 수요일 창체는 비워둠</h3>
     <br>
     <br>
@@ -51,7 +53,17 @@
         </div>
         <button id="go">시작</button>
     </div>
+    <div style="text-align: center">
+        <h2>통합사회 개념 제대로 잡고 싶다면?</h2>
+        <iframe src="https://coupa.ng/b7jncA" width="120" height="240" frameborder="0" scrolling="no" referrerpolicy="unsafe-url"></iframe>
+        <h2>다양한 고품격 통합사회 문제 풀고 싶다면?</h2>
+        <iframe src="https://coupa.ng/b7jniu" width="120" height="240" frameborder="0" scrolling="no" referrerpolicy="unsafe-url"></iframe>
+        <h2>통합사회 내신 99점이 푸는 문제집!</h2>
+        <iframe src="https://coupa.ng/b7jnl3" width="120" height="240" frameborder="0" scrolling="no" referrerpolicy="unsafe-url"></iframe>
+        <h5>이 포스팅은 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.</h5>
+    </div>
     <script>
+        alert("제발 팝업 허용 해주세요..그래야 작동함");
         let handleId = 0;
         const h1 = document.getElementById("time")
         const go = document.getElementById("go")
